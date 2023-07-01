@@ -34,6 +34,24 @@
             android:exported="true"
             android:label="Edit Product"
             android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".FavouriteProductsActivity"
+            android:exported="true"
+            android:label="Favourites"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ActivityAddFavourite"
+            android:exported="true"
+            android:label="Add Favourite"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".EditFavouriteProduct"
+            android:exported="true"
+            android:label="Edit favourite product"
+            android:theme="@style/AppTheme" />
     </application>
 
 
