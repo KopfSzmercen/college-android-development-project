@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -60,10 +61,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        
 
         if (requestCode == 2 && resultCode == Activity.RESULT_OK) {
-
             val updatedProduct = data?.getSerializableExtra("updatedProduct") as? Product
             if (updatedProduct != null) {
                 val index = productList.indexOfFirst { it.id == updatedProduct.id }
@@ -93,6 +92,12 @@ class MainActivity : AppCompatActivity() {
         buttonGoToAddProduct.setOnClickListener {
             val intent = Intent(this, AddProductActivity::class.java)
             addProductLauncher.launch(intent)
+        }
+
+        val buttonGoToFavourites: ImageButton = findViewById(R.id.goToFavourites)
+        buttonGoToFavourites.setOnClickListener {
+            val intent = Intent(this, FavouriteProductsActivity::class.java)
+            startActivity(intent)
         }
     }
 
