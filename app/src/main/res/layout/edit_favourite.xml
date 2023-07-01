@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:layout_marginTop="65dp"
+    android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <TextView
@@ -10,12 +11,13 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="Edit Favourite Product"
+        android:textColor="#0C0C0C"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/productNameEditText"
-        android:layout_width="match_parent"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:hint="Product Name"
         android:padding="16dp" />
@@ -25,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#FFC107"
         android:text="Save" />
 
 </LinearLayout>
